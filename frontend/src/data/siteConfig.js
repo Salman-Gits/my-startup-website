@@ -8,7 +8,7 @@ export const siteConfig = {
   description:
     'A two-person creative studio helping creators and businesses turn ideas into engaging videos and modern websites.',
   // Contact details — also configurable via backend environment variables
-  email: 'hello@yourstudioname.com',
+  email: 'mdsalmand008@gmail.com',
   whatsappNumber: '917358653020', // international format, no + or spaces
   whatsappDisplay: '+91 73586 53020',
   // Social links — leave empty string to hide the icon
