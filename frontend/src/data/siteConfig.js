@@ -21,7 +21,7 @@ export const siteConfig = {
   },
   // SEO
   seo: {
-    title: 'YOUR STUDIO NAME — Video Editing & Web Development Studio',
+    title: 'The SB Creation — Video Editing & Web Development Studio',
     description:
       'We help creators, YouTubers, and businesses turn ideas into engaging videos and modern websites. Video editing, web development, and creative solutions.',
     url: 'https://yourstudioname.com',
