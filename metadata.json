@@ -1,0 +1,7 @@
+{
+  "name": "Creative Agency Website",
+  "description": "Video editing and web development creative studio portfolio with contact inquiry handling.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

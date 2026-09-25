@@ -61,17 +61,9 @@ export default function ContactForm({ onToast }) {
       timestamp: new Date().toISOString(),
     };
 
-    if (!apiBaseUrl) {
-      onToast({
-        type: 'error',
-        message: 'Backend is not configured. Please use WhatsApp to contact us.',
-      });
-      setLoading(false);
-      return;
-    }
-
     try {
-      const res = await fetch(`${apiBaseUrl}/api/contact`, {
+      const endpoint = apiBaseUrl ? `${apiBaseUrl}/api/contact` : '/api/contact';
+      const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
