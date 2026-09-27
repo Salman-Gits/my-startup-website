@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, Sparkles, Film, Code2, Wand2 } from 'lucide-react';
-import { siteConfig } from './data/siteConfig';
+import { siteConfig } from '../data/siteConfig';
 
 const scrollTo = (id) => {
   const el = document.getElementById(id);
