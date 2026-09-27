@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X, Clapperboard } from 'lucide-react';
-import { navLinks, siteConfig } from './data/siteConfig';
+import { navLinks, siteConfig } from '../data/siteConfig';
 import ThemeToggle from './ThemeToggle';
 
 export default function Navbar({ theme, onToggleTheme }) {
