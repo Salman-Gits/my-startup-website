@@ -1,21 +1,21 @@
 import { useState, useEffect } from 'react';
 import Navbar from "./components/Navbar";
-import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import Portfolio from '@/components/Portfolio';
-import FeaturedProject from '@/components/FeaturedProject';
-import About from '@/components/About';
-import Process from '@/components/Process';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import Testimonials from '@/components/Testimonials';
-import CTA from '@/components/CTA';
-import ContactForm from '@/components/ContactForm';
-import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
-import ToastNotification from '@/components/ToastNotification';
-import VideoEditorModal from '@/components/VideoEditorModal';
-import { useTheme } from '@/hooks/useTheme';
-import { siteConfig } from '@/data/siteConfig';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Portfolio from './components/Portfolio';
+import FeaturedProject from './components/FeaturedProject';
+import About from './components/About';
+import Process from './components/Process';
+import WhyChooseUs from './components/WhyChooseUs';
+import Testimonials from './components/Testimonials';
+import CTA from './components/CTA';
+import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
+import ToastNotification from './components/ToastNotification';
+import VideoEditorModal from './components/VideoEditorModal';
+import { useTheme } from './hooks/useTheme';
+import { siteConfig } from './data/siteConfig';
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
