@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Lightbulb, ClipboardList, PenTool, Rocket } from 'lucide-react';
-import { processSteps } from './data/founders';
+import { processSteps } from '../data/founders';
 
 const iconMap = { Lightbulb, ClipboardList, PenTool, Rocket };
 
