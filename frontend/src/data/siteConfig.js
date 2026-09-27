@@ -3,11 +3,11 @@
 
 export const siteConfig = {
   name: 'The SB Creation',
-<<<<<<< Updated upstream
+
   tagline: 'CREATE. CONNECT. GROW.',
-=======
+
   tagline: 'We Edit. We Build. We Create.',
->>>>>>> Stashed changes
+
   // Short description used in footer and meta tags
   description:
     'Creative Digital Solutions That Make Your Brand Stand Out. Video editing, reels, promotional videos, and digital creative solutions.',
