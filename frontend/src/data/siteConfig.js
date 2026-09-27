@@ -3,28 +3,32 @@
 
 export const siteConfig = {
   name: 'The SB Creation',
+<<<<<<< Updated upstream
   tagline: 'CREATE. CONNECT. GROW.',
+=======
+  tagline: 'We Edit. We Build. We Create.',
+>>>>>>> Stashed changes
   // Short description used in footer and meta tags
   description:
     'Creative Digital Solutions That Make Your Brand Stand Out. Video editing, reels, promotional videos, and digital creative solutions.',
   // Contact details — also configurable via backend environment variables
-  email: 'mdsalmand008@gmail.com',
-  whatsappNumber: '917358653020', // international format, no + or spaces
-  whatsappDisplay: '+91 73586 53020',
+  email: 'shadowbeastc@gmail.com',
+  whatsappNumber: '917338984366', // international format, no + or spaces
+  whatsappDisplay: '+91 73389 84366',
   // Social links — leave empty string to hide the icon
   social: {
-    instagram: 'https://instagram.com/yourhandle',
+    instagram: 'https://www.instagram.com/sbcreation.in/',
     linkedin: 'https://linkedin.com/company/yourhandle',
     github: 'https://github.com/yourhandle',
     youtube: 'https://youtube.com/@yourhandle',
-    whatsapp: 'https://wa.me/917358653020',
+    whatsapp: 'https://wa.me/917338984366',
   },
   // SEO
   seo: {
     title: 'The SB Creation — Video Editing & Web Development Studio',
     description:
       'We help creators, YouTubers, and businesses turn ideas into engaging videos and modern websites. Video editing, web development, and creative solutions.',
-    url: 'https://yourstudioname.com',
+    url: 'https://the-sbcreation.vercel.app/',
     ogImage: '/assets/images/og-cover.jpg',
   },
   // Year for footer copyright

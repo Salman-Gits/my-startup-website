@@ -233,4 +233,4 @@ Edit `testimonials.js`. The current testimonials are **placeholder samples** —
 
 ---
 
-© 2026 YOUR STUDIO NAME. All rights reserved.
+© 2026 The SB creation. All rights reserved.
