@@ -14,8 +14,12 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import ToastNotification from './components/ToastNotification';
 import VideoEditorModal from './components/VideoEditorModal';
+import MaintenancePage from './components/MaintenancePage';
 import { useTheme } from './hooks/useTheme';
 import { siteConfig } from './data/siteConfig';
+
+// Temporary maintenance mode flag — set to false to restore the full website
+const MAINTENANCE_MODE = true;
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
@@ -33,8 +37,24 @@ export default function App() {
 
   // Update document title from config
   useEffect(() => {
-    document.title = siteConfig.seo.title;
+    document.title = MAINTENANCE_MODE
+      ? `${siteConfig.name} — Website Under Maintenance`
+      : siteConfig.seo.title;
   }, []);
+
+  if (MAINTENANCE_MODE) {
+    return (
+      <div className="min-h-screen bg-white text-ink-900 dark:bg-ink-950 dark:text-ink-100">
+        <MaintenancePage
+          theme={theme}
+          onToggleTheme={toggleTheme}
+          onToast={setToast}
+        />
+        <WhatsAppButton />
+        <ToastNotification toast={toast} onClose={() => setToast(null)} />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white text-ink-900 dark:bg-ink-950 dark:text-ink-100">
