@@ -31,10 +31,13 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 text-white">
-                <Clapperboard size={18} />
-              </span>
+            <div className="flex items-center gap-3">
+              <img
+                src="/SB-creation.jpg"
+                alt={siteConfig.name}
+                className="h-14 w-16 rounded-xl object-contain shadow-sm border border-ink-200/60 dark:border-ink-800/60 sm:h-12 sm:w-18"
+                // className="h-11 w-11 rounded-xl object-contain shadow-sm border border-ink-200/60 dark:border-ink-800/60 sm:h-12 sm:w-12"
+              />
               <span className="font-display text-lg font-bold text-ink-900 dark:text-white">
                 {siteConfig.name}
               </span>
@@ -53,16 +56,30 @@ export default function Footer() {
               Services
             </h3>
             <ul className="mt-4 space-y-2.5">
-              {services.map((s) => (
-                <li key={s.id}>
-                  <a
-                    href="#services"
-                    className="text-sm text-ink-600 transition-colors hover:text-primary-600 dark:text-ink-300 dark:hover:text-primary-400"
-                  >
-                    {s.title}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="#video-editing"
+                  className="text-sm text-ink-600 transition-colors hover:text-primary-600 dark:text-ink-300 dark:hover:text-primary-400"
+                >
+                  Video Editing
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#web-development"
+                  className="text-sm text-ink-600 transition-colors hover:text-primary-600 dark:text-ink-300 dark:hover:text-primary-400"
+                >
+                  Website Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#work"
+                  className="text-sm text-ink-600 transition-colors hover:text-primary-600 dark:text-ink-300 dark:hover:text-primary-400"
+                >
+                  Portfolio & Case Studies
+                </a>
+              </li>
             </ul>
           </div>
 

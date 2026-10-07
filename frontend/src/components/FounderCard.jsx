@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Instagram, Youtube, Twitter } from 'lucide-react';
+import { Github, Linkedin, Instagram, Youtube, Twitter, ExternalLink, Award } from 'lucide-react';
 
 const socialIcons = {
   github: Github,
@@ -9,9 +9,10 @@ const socialIcons = {
   twitter: Twitter,
 };
 
-export default function FounderCard({ founder, index, onOpenVideoModal }) {
+export default function FounderCard({ founder, index, onOpenVideoModal, onOpenResumeModal }) {
   const socials = Object.entries(founder.social).filter(([, url]) => url);
   const isVideoFounder = founder.name === 'Shaheinsha' || founder.role.includes('Video');
+  const isDeveloperFounder = founder.name.includes('Salman') || founder.role.includes('Developer');
 
   return (
     <motion.div
@@ -35,14 +36,16 @@ export default function FounderCard({ founder, index, onOpenVideoModal }) {
             e.currentTarget.style.display = 'none';
           }}
         />
-        <div className="absolute inset-0 flex items-center justify-center text-ink-400">
-          <span className="font-display text-3xl font-bold">
-            {founder.name.charAt(0)}
-          </span>
-        </div>
+        
       </div>
 
       <div className="mt-5 text-center">
+        {founder.achievement && (
+          <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-3 py-0.5 text-[11px] font-bold text-amber-600 dark:text-amber-400 mb-2">
+            <Award size={12} />
+            {founder.achievement}
+          </span>
+        )}
         <h3 className="font-display text-xl font-bold text-ink-900 dark:text-white">
           {founder.name}
         </h3>
@@ -88,14 +91,48 @@ export default function FounderCard({ founder, index, onOpenVideoModal }) {
         </div>
       )}
 
+      {isDeveloperFounder && (
+        <div className="mt-6 flex flex-col gap-2 w-full">
+          <a
+            href={founder.portfolioUrl || 'https://portfolio-lovat-pi-51.vercel.app/'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-primary-600 py-2.5 text-center text-xs font-bold text-white shadow-sm transition-all hover:bg-primary-500 active:scale-[0.98]"
+          >
+            <span>View Portfolio</span>
+            <ExternalLink size={14} />
+          </a>
+          {onOpenResumeModal && (
+            <button
+              type="button"
+              onClick={onOpenResumeModal}
+              className="w-full inline-flex items-center justify-center gap-2 rounded-2xl border border-ink-200 bg-ink-50 py-2.5 text-center text-xs font-semibold text-ink-700 transition-all hover:border-primary-400 hover:text-primary-600 dark:border-ink-700 dark:bg-ink-800 dark:text-ink-200 dark:hover:text-primary-400"
+            >
+              <span>View Resume & Credentials</span>
+            </button>
+          )}
+        </div>
+      )}
+
       {isVideoFounder && onOpenVideoModal && (
+        <div className="mt-6 flex flex-col gap-2 w-full">
+          <a
+            href={founder.portfolioUrl || 'https://portfolio-lovat-pi-51.vercel.app/'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-primary-600 py-2.5 text-center text-xs font-bold text-white shadow-sm transition-all hover:bg-primary-500 active:scale-[0.98]"
+          >
+            <span>View Portfolio</span>
+            <ExternalLink size={14} />
+          </a>
         <button
           type="button"
           onClick={onOpenVideoModal}
-          className="mt-6 w-full rounded-2xl border border-accent-500/30 bg-accent-500/10 py-2.5 text-center text-xs font-bold text-accent-600 transition-all hover:bg-accent-500 hover:text-white dark:text-accent-400 dark:hover:bg-accent-500 dark:hover:text-white"
-        >
+          className="w-full inline-flex items-center justify-center gap-2 rounded-2xl border border-ink-200 bg-ink-50 py-2.5 text-center text-xs font-semibold text-ink-700 transition-all hover:border-primary-400 hover:text-primary-600 dark:border-ink-700 dark:bg-ink-800 dark:text-ink-200 dark:hover:text-primary-400"
+             >
           View Video Services & Work Process
         </button>
+        </div>
       )}
     </motion.div>
   );

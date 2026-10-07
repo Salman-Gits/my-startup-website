@@ -78,7 +78,7 @@ export default function Portfolio() {
           layout
           className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence >
             {filtered.map((project, i) => (
               <PortfolioCard
                 key={project.id}

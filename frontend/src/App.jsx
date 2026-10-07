@@ -15,21 +15,28 @@ import WhatsAppButton from './components/WhatsAppButton';
 import ToastNotification from './components/ToastNotification';
 import VideoEditorModal from './components/VideoEditorModal';
 import MaintenancePage from './components/MaintenancePage';
+import VideoEditing from './components/VideoEditing';
+import WebDevelopment from './components/WebDevelopment';
+import ResumeModal from './components/ResumeModal';
 import { useTheme } from './hooks/useTheme';
 import { siteConfig } from './data/siteConfig';
 
-// Temporary maintenance mode flag — set to false to restore the full website
-const MAINTENANCE_MODE = true;
+// Temporary maintenance mode flag — set to true if temporary maintenance is needed
+const MAINTENANCE_MODE = false;
 
 export default function App() {
   const { theme, toggleTheme } = useTheme();
   const [toast, setToast] = useState(null);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   // Lock body scroll when modal is handled inside Portfolio — hook for Escape
   useEffect(() => {
     const onKey = (e) => {
-      if (e.key === 'Escape') setToast(null);
+      if (e.key === 'Escape') {
+        setToast(null);
+        setIsResumeModalOpen(false);
+      }
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -63,9 +70,14 @@ export default function App() {
       <main>
         <Hero />
         <Services onOpenVideoModal={() => setIsVideoModalOpen(true)} />
+        <VideoEditing onOpenVideoModal={() => setIsVideoModalOpen(true)} />
+        <WebDevelopment onOpenResumeModal={() => setIsResumeModalOpen(true)} />
         <Portfolio />
         <FeaturedProject />
-        <About onOpenVideoModal={() => setIsVideoModalOpen(true)} />
+        <About
+          onOpenVideoModal={() => setIsVideoModalOpen(true)}
+          onOpenResumeModal={() => setIsResumeModalOpen(true)}
+        />
         <Process />
         <WhyChooseUs />
         <Testimonials />
@@ -79,6 +91,10 @@ export default function App() {
       <VideoEditorModal
         isOpen={isVideoModalOpen}
         onClose={() => setIsVideoModalOpen(false)}
+      />
+      <ResumeModal
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
       />
     </div>
   );

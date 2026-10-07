@@ -5,7 +5,7 @@ import FounderCard from './FounderCard';
 
 const whyIcons = { MessageCircle, Sparkles, Zap, Clock, Wallet, Layers };
 
-export default function About({ onOpenVideoModal }) {
+export default function About({ onOpenVideoModal, onOpenResumeModal }) {
   return (
     <section id="about" className="section-pad bg-ink-50/50 dark:bg-ink-950">
       <div className="container-max">
@@ -37,6 +37,7 @@ export default function About({ onOpenVideoModal }) {
               founder={f}
               index={i}
               onOpenVideoModal={onOpenVideoModal}
+              onOpenResumeModal={onOpenResumeModal}
             />
           ))}
         </div>

@@ -35,22 +35,22 @@ export default function Navbar({ theme, onToggleTheme }) {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled
-          ? 'border-b border-ink-200/60 bg-white/80 backdrop-blur-xl dark:border-ink-800/60 dark:bg-ink-950/80'
-          : 'border-b border-transparent bg-transparent'
+        ? 'border-b border-ink-200/60 bg-white/80 backdrop-blur-xl dark:border-ink-800/60 dark:bg-ink-950/80'
+        : 'border-b border-transparent bg-transparent'
         }`}
     >
       <nav className="container-max flex h-16 items-center justify-between px-5 sm:px-8 md:h-20 lg:px-12">
         {/* Logo */}
-    
+
         <button
           onClick={() => handleNav('#home')}
-          className="flex items-center gap-2.5"
+          className="group flex items-center gap-3 text-left"
           aria-label={siteConfig.name}
         >
           <img
             src="/SB-creation.jpg"
             alt={siteConfig.name}
-            className="h-10 w-10 rounded-xl object-contain"
+            className="h-14 w-16 rounded-xl object-contain shadow-sm border border-ink-200/60 transition-transform group-hover:scale-105 dark:border-ink-800/60 sm:h-12 sm:w-18"
           />
 
           <span className="font-display text-base font-bold tracking-tight text-ink-900 dark:text-white sm:text-lg">
@@ -65,8 +65,8 @@ export default function Navbar({ theme, onToggleTheme }) {
               key={link.href}
               onClick={() => handleNav(link.href)}
               className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${active === link.href
-                  ? 'text-primary-600 dark:text-primary-400'
-                  : 'text-ink-600 hover:text-ink-900 dark:text-ink-300 dark:hover:text-white'
+                ? 'text-primary-600 dark:text-primary-400'
+                : 'text-ink-600 hover:text-ink-900 dark:text-ink-300 dark:hover:text-white'
                 }`}
             >
               {link.label}
@@ -117,8 +117,8 @@ export default function Navbar({ theme, onToggleTheme }) {
                   key={link.href}
                   onClick={() => handleNav(link.href)}
                   className={`rounded-xl px-4 py-3 text-left text-sm font-medium transition-colors ${active === link.href
-                      ? 'bg-primary-500/10 text-primary-600 dark:text-primary-400'
-                      : 'text-ink-700 hover:bg-ink-100 dark:text-ink-200 dark:hover:bg-ink-900'
+                    ? 'bg-primary-500/10 text-primary-600 dark:text-primary-400'
+                    : 'text-ink-700 hover:bg-ink-100 dark:text-ink-200 dark:hover:bg-ink-900'
                     }`}
                 >
                   {link.label}

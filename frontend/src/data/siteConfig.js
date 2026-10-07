@@ -38,11 +38,14 @@ export const siteConfig = {
 // Navigation links
 export const navLinks = [
   { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
+  { label: 'Video Editing', href: '#video-editing' },
+  { label: 'Website Development', href: '#web-development' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ];
+
+// Developer Portfolio Link
+export const portfolioUrl = 'https://portfolio-lovat-pi-51.vercel.app/';
 
 // Budget options for the contact form
 export const budgetOptions = [

@@ -103,7 +103,7 @@ export default function ContactForm({ onToast }) {
         `Message: ${form.message}`
     );
     window.open(
-      `https://wa.me/917358653020?text=${msg}`,
+      `https://wa.me/${siteConfig.whatsappNumber}?text=${msg}`,
       '_blank',
       'noopener,noreferrer'
     );

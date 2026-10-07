@@ -3,23 +3,47 @@
 export const founders = [
   {
     id: 1,
-    name: 'Founder One',
-    role: 'Web Developer',
-    photo: '/assets/images/founder-1.jpg',
-    bio: 'Builds fast, modern, responsive websites that help businesses look professional and grow online. Focused on clean code and thoughtful user experience.',
-    skills: ['React', 'Node.js', 'UI Design', 'Performance', 'SEO'],
+    name: 'Mohammed Salman M',
+    role: 'Full Stack Web Developer & Co-Founder',
+    photo: '/assets/images/founder-1.png',
+    bio: 'Full Stack Developer with internship experience building production web apps using React.js, Java, Spring Boot, Spring Data JPA, REST APIs, and MySQL. Academic Gold Medalist (3 consecutive years, B.Sc. IT).',
+    skills: [
+      'React.js',
+      'JavaScript (ES6+)',
+      'Responsive Web',
+      'Java & Spring Boot',
+      'REST APIs',
+      'MySQL',
+      'Git & GitHub',
+      'Vercel Deployment',
+    ],
+    education: 'B.Sc. IT — The New College, Chennai (CGPA 8.5/10)',
+    achievement: 'Academic Gold Medalist (3 Consecutive Years)',
+    portfolioUrl: 'https://portfolio-lovat-pi-51.vercel.app/',
     social: {
-      github: 'https://github.com/yourhandle',
-      linkedin: 'https://linkedin.com/in/yourhandle',
+      github: 'https://github.com/Salman-Gits',
+      linkedin: 'https://linkedin.com/in/mohammed-salman-m-17b573262',
       twitter: '',
       instagram: '',
     },
+    projects: [
+      {
+        title: 'Blood Bank Management System',
+        tech: 'React.js, Spring Boot, MySQL, REST API, Axios',
+        desc: 'Full-stack application for donor registration, blood group search, and real-time inventory tracking with indexed queries.',
+      },
+      {
+        title: 'E-Commerce Web Application',
+        tech: 'React.js, Java, Spring Boot, MySQL, REST API',
+        desc: 'Full-stack e-commerce platform with product listing, cart management, and inventory handling without page reloads.',
+      },
+    ],
   },
   {
     id: 2,
     name: 'Shaheinsha',
     role: 'Video Editor & Founder',
-    photo: '/assets/images/founder-2.jpg',
+    photo: '/assets/images/founder-2.png',
     bio: 'Transforms ideas into powerful visuals — specializing in Instagram reels, YouTube videos, promotional edits, event highlights, and cinematic cuts crafted with creative direction and high retention.',
     skills: [
       'Video Editing',
@@ -31,6 +55,7 @@ export const founders = [
       'Motion Graphics',
       'Sound Design',
     ],
+    portfolioUrl: 'https://portfolio-lovat-pi-51.vercel.app/',
     social: {
       instagram: 'https://instagram.com/sbcreation.in',
       youtube: '',
